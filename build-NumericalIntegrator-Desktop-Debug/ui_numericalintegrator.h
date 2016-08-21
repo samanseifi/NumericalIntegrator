@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
@@ -27,20 +28,44 @@ public:
     QWidget *centralWidget;
     QLineEdit *lineEdit;
     QPushButton *pushButton;
+    QLabel *label;
+    QLabel *label_2;
+    QLabel *label_3;
+    QLineEdit *lineEdit_2;
+    QLineEdit *lineEdit_3;
+    QPushButton *pushButton_2;
 
     void setupUi(QMainWindow *NumericalIntegrator)
     {
         if (NumericalIntegrator->objectName().isEmpty())
             NumericalIntegrator->setObjectName(QStringLiteral("NumericalIntegrator"));
-        NumericalIntegrator->resize(400, 106);
+        NumericalIntegrator->resize(434, 109);
         centralWidget = new QWidget(NumericalIntegrator);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         lineEdit = new QLineEdit(centralWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(70, 10, 261, 27));
+        lineEdit->setGeometry(QRect(46, 7, 261, 27));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(140, 60, 97, 26));
+        pushButton->setGeometry(QRect(210, 40, 97, 26));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(9, 11, 31, 17));
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(374, 10, 21, 17));
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(316, 10, 21, 17));
+        lineEdit_2 = new QLineEdit(centralWidget);
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(332, 7, 30, 27));
+        lineEdit_3 = new QLineEdit(centralWidget);
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+        lineEdit_3->setGeometry(QRect(392, 7, 30, 27));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(210, 70, 97, 26));
         NumericalIntegrator->setCentralWidget(centralWidget);
 
         retranslateUi(NumericalIntegrator);
@@ -52,6 +77,10 @@ public:
     {
         NumericalIntegrator->setWindowTitle(QApplication::translate("NumericalIntegrator", "NumericalIntegrator", 0));
         pushButton->setText(QApplication::translate("NumericalIntegrator", "Evaluate", 0));
+        label->setText(QApplication::translate("NumericalIntegrator", "f(x)=", 0));
+        label_2->setText(QApplication::translate("NumericalIntegrator", "b=", 0));
+        label_3->setText(QApplication::translate("NumericalIntegrator", "<html><head/><body><p>a=</p></body></html>", 0));
+        pushButton_2->setText(QApplication::translate("NumericalIntegrator", "Integrate!", 0));
     } // retranslateUi
 
 };

@@ -23,9 +23,10 @@ void NumericalIntegrator::on_pushButton_clicked()
     /* replace the power operator to python syntax (i.e. 2^3 becomes 2**3) */
     functionStr.replace("^", "**");
     functionStr = functionStr.toLower(); // uppercases to lowercases!
-    functionStr.replace("exp", "USA");
+    
+    functionStr.replace("exp", "eyp");
     functionStr.replace("x", ui->lineEdit_2->text());
-    functionStr.replace("USA", "exp");
+    functionStr.replace("eyp", "exp");
     QByteArray ba = functionStr.toLatin1();
     const char *funcName = ba.data();
 
@@ -47,4 +48,9 @@ void NumericalIntegrator::Evaluate_Function(const char* funcName)
     PyRun_SimpleString( strcat( line, end));
 
     Py_Finalize();
+}
+
+void NumericalIntegrator::on_pushButton_2_clicked()
+{
+    
 }
