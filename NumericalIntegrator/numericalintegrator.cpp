@@ -17,15 +17,6 @@ NumericalIntegrator::~NumericalIntegrator()
     delete ui;
 }
 
-void NumericalIntegrator::on_pushButton_clicked()
-{
-    QString functionStr = ui->lineEdit->text();
-    QString a = ui->lineEdit_2->text();
-
-    Evaluate_Function(functionStr, a);
-
-
-}
 
 double NumericalIntegrator::Evaluate_Function(QString functionStr, QString a)
 {

@@ -17,7 +17,6 @@ public:
     ~NumericalIntegrator();
 
 private slots:
-    void on_pushButton_clicked();
     double Evaluate_Function(QString functionStr, QString a);
 
 

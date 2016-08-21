@@ -27,7 +27,6 @@ class Ui_NumericalIntegrator
 public:
     QWidget *centralWidget;
     QLineEdit *lineEdit;
-    QPushButton *pushButton;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
@@ -39,15 +38,12 @@ public:
     {
         if (NumericalIntegrator->objectName().isEmpty())
             NumericalIntegrator->setObjectName(QStringLiteral("NumericalIntegrator"));
-        NumericalIntegrator->resize(434, 109);
+        NumericalIntegrator->resize(434, 78);
         centralWidget = new QWidget(NumericalIntegrator);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         lineEdit = new QLineEdit(centralWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setGeometry(QRect(46, 7, 261, 27));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(210, 40, 97, 26));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(9, 11, 31, 17));
@@ -65,7 +61,7 @@ public:
         lineEdit_3->setGeometry(QRect(392, 7, 30, 27));
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(210, 70, 97, 26));
+        pushButton_2->setGeometry(QRect(324, 40, 97, 26));
         NumericalIntegrator->setCentralWidget(centralWidget);
 
         retranslateUi(NumericalIntegrator);
@@ -76,7 +72,6 @@ public:
     void retranslateUi(QMainWindow *NumericalIntegrator)
     {
         NumericalIntegrator->setWindowTitle(QApplication::translate("NumericalIntegrator", "NumericalIntegrator", 0));
-        pushButton->setText(QApplication::translate("NumericalIntegrator", "Evaluate", 0));
         label->setText(QApplication::translate("NumericalIntegrator", "f(x)=", 0));
         label_2->setText(QApplication::translate("NumericalIntegrator", "b=", 0));
         label_3->setText(QApplication::translate("NumericalIntegrator", "<html><head/><body><p>a=</p></body></html>", 0));

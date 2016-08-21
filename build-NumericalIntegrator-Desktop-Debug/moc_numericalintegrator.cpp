@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_NumericalIntegrator_t {
-    QByteArrayData data[7];
-    char stringdata[100];
+    QByteArrayData data[6];
+    char stringdata[78];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,16 +30,14 @@ struct qt_meta_stringdata_NumericalIntegrator_t {
 static const qt_meta_stringdata_NumericalIntegrator_t qt_meta_stringdata_NumericalIntegrator = {
     {
 QT_MOC_LITERAL(0, 0, 19),
-QT_MOC_LITERAL(1, 20, 21),
-QT_MOC_LITERAL(2, 42, 0),
-QT_MOC_LITERAL(3, 43, 17),
-QT_MOC_LITERAL(4, 61, 11),
-QT_MOC_LITERAL(5, 73, 1),
-QT_MOC_LITERAL(6, 75, 23)
+QT_MOC_LITERAL(1, 20, 17),
+QT_MOC_LITERAL(2, 38, 0),
+QT_MOC_LITERAL(3, 39, 11),
+QT_MOC_LITERAL(4, 51, 1),
+QT_MOC_LITERAL(5, 53, 23)
     },
-    "NumericalIntegrator\0on_pushButton_clicked\0"
-    "\0Evaluate_Function\0functionStr\0a\0"
-    "on_pushButton_2_clicked\0"
+    "NumericalIntegrator\0Evaluate_Function\0"
+    "\0functionStr\0a\0on_pushButton_2_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -49,7 +47,7 @@ static const uint qt_meta_data_NumericalIntegrator[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -57,13 +55,11 @@ static const uint qt_meta_data_NumericalIntegrator[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x08,
-       3,    2,   30,    2, 0x08,
-       6,    0,   35,    2, 0x08,
+       1,    2,   24,    2, 0x08,
+       5,    0,   29,    2, 0x08,
 
  // slots: parameters
-    QMetaType::Void,
-    QMetaType::Double, QMetaType::QString, QMetaType::QString,    4,    5,
+    QMetaType::Double, QMetaType::QString, QMetaType::QString,    3,    4,
     QMetaType::Void,
 
        0        // eod
@@ -74,10 +70,9 @@ void NumericalIntegrator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         NumericalIntegrator *_t = static_cast<NumericalIntegrator *>(_o);
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
-        case 1: { double _r = _t->Evaluate_Function((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])));
+        case 0: { double _r = _t->Evaluate_Function((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])));
             if (_a[0]) *reinterpret_cast< double*>(_a[0]) = _r; }  break;
-        case 2: _t->on_pushButton_2_clicked(); break;
+        case 1: _t->on_pushButton_2_clicked(); break;
         default: ;
         }
     }
@@ -108,13 +103,13 @@ int NumericalIntegrator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 2)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
+        _id -= 2;
     }
     return _id;
 }
