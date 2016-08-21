@@ -18,8 +18,10 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void Evaluate_Function(const char* funcName);
+    double Evaluate_Function(QString functionStr, QString a);
 
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::NumericalIntegrator *ui;
